@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    background-color: rgb(205, 10, 205);
+    width: auto;
+    color: white;
+    height: 75px;
+    font-size: 27px;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    padding: 0px 12px;
+    /* justify-content: center; */
+}
+nav ul li{
+    list-style: none;
+}
+
+.gameContainer{
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.line{
+    background-color: black;
+    height:3px;
+    width: 0;
+    position:absolute;
+    background-color: #911d91;
+    transition: widh 1s ease-in-out;
+}
+.container{
+    display: grid;
+    grid-template-rows: repeat(3,10vw);  /*repeat for 3 rows having 10 vw width each*/
+    grid-template-columns: repeat(3,10vw);
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+
+.box{
+    border: 2px solid black;
+    font-size: 8vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box:hover{
+    background-color: rgb(242, 234, 250);
+    /* border: 2px solid black; */
+    font-size: 8vw;
+    cursor: pointer;
+}
+
+.gameInfo{
+    padding: 0 34px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.info{
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    font-weight: bolder;
+    letter-spacing: 0.1rem;
+}
+.imageBox img{
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+/* creating utility classes for manual css styles */
+.br-0{
+    border-right: 0;
+}
+.bl-0{
+    border-left: 0;
+}
+.bt-0{
+    border-top: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+#player{
+    color: blueviolet;
+    font-size: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#turn-reset{
+    margin-top: 50px;
+    background-color: rgb(210, 248, 248);
+    border: 1px solid black;
+    padding: 20px 20px;
+    border-radius: 7px;
+}
+#reset{
+    margin:0 80px;
+    padding: 3px 10px;
+    background: #f3e7ff;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    font-weight: bolder;
+    letter-spacing: 0.2rem;
+}
+#reset:hover{
+    background-color: rgb(222, 238, 200);
+    transition: 0.1s ease-in-out;
+}
+
+@media screen and (max-width: 867px){
+    .gameContainer{
+        flex-wrap: wrap;
+    }
+    .gameInfo{
+        margin-top: 35px;
+    }
+    .gameInfo h1{
+        font-size: 1.5rem;
+    }
+    .container{
+        grid-template-rows: repeat(3,20vw);
+        grid-template-columns: repeat(3,20vw);
+    }
+}
+    
